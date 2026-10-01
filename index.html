@@ -72,6 +72,18 @@
       padding-right:54px;
     }
     .date{font-size:.92rem;color:var(--muted)}
+    .period-mini{
+      display:inline-flex;
+      align-items:center;
+      border-radius:999px;
+      padding:3px 8px;
+      font-size:.76rem;
+      font-weight:700;
+      color:#665d54;
+      background:#f2ece3;
+      border:1px solid #ddd2c3;
+      white-space:nowrap;
+    }
     .cat{
       display:inline-flex;
       align-items:center;
@@ -161,18 +173,22 @@ fetch("./data/news.json",{cache:"no-store"}).then(r=>r.json()).then(data=>{
   let html="";
   let current=null;
   for(const x of items){
-    const period=x.period_group||x.section||"週報掲載項目";
-    if(period!==current){
+    const rawPeriod=x.period_group||x.section||"";
+    const majorPeriod=/^直近/.test(rawPeriod) ? "直近1ヶ月" : "開催中・今後3ヶ月";
+    if(majorPeriod!==current){
       if(current!==null) html+="</div></section>";
-      html+='<section class="period"><h2 class="period-title">'+esc(period)+'</h2><div class="items">';
-      current=period;
+      html+='<section class="period"><h2 class="period-title">'+esc(majorPeriod)+'</h2><div class="items">';
+      current=majorPeriod;
     }
     const cm=categoryMeta(x.category);
+    const periodBadge = rawPeriod && rawPeriod!==majorPeriod
+      ? '<span class="period-mini">'+esc(rawPeriod)+'</span>' : "";
     html+=`
       <article>
         ${x.is_new===true?'<div class="new-badge">NEW</div>':""}
         <div class="topline">
           <span class="cat ${cm.cls}"><span aria-hidden="true">${cm.icon}</span>${esc(cm.label)}</span>
+          ${periodBadge}
           <span class="date">${esc(x.date||"")}</span>
         </div>
         <div class="title">${esc(x.title||"")}</div>
