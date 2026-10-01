@@ -25,12 +25,13 @@
     article:last-child{border-bottom:0}
     .date{font-size:.82rem;color:#3f3933;font-weight:650;line-height:1.2;white-space:normal}
     .cat{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:3px 7px;font-size:.72rem;font-weight:750;border:1px solid rgba(0,0,0,.08);white-space:nowrap}
-    .cat-event{background:#f6d3bb}.cat-game{background:#cfe1f2}.cat-book{background:#ddd3ef}.cat-anime{background:#cfe5c7}.cat-goods{background:#f4e3a9}.cat-other{background:#e2ded8}
+    .cat-event{background:#4f9a72;color:#fff}.cat-game{background:#4c8fbd;color:#fff}.cat-book{background:#8d69ae;color:#fff}.cat-anime{background:#c34f4f;color:#fff}.cat-campaign{background:#d68b3f;color:#fff}.cat-goods{background:#c5a23a;color:#fff}.cat-other{background:#777;color:#fff}
     .maincell{min-width:0}
     .titleline{display:flex;align-items:center;gap:7px;min-width:0}
     .xlink{display:inline-grid;place-items:center;flex:0 0 auto;width:23px;height:23px;border-radius:50%;background:#111;color:#fff;text-decoration:none;font-size:.78rem;font-weight:800;line-height:1}
     .xlink:hover{opacity:.78}
-    .title{font-weight:720;font-size:.9rem;min-width:0;white-space:pre-line}
+    .title{font-weight:720;font-size:.9rem;min-width:0}
+    .detail{margin:2px 0 0 30px;color:#4f4943;font-size:.79rem;white-space:pre-line;line-height:1.25}
     .new-badge{display:inline-grid;place-items:center;flex:0 0 auto;width:32px;height:32px;margin-left:2px;background:var(--new);color:#fff;font-weight:900;font-size:.56rem;clip-path:polygon(50% 0%,61% 15%,78% 7%,82% 25%,100% 29%,89% 45%,100% 58%,82% 64%,81% 84%,62% 78%,50% 100%,39% 80%,20% 88%,19% 67%,0 61%,12% 45%,1% 30%,20% 25%,22% 7%,40% 16%)}
     footer{margin-top:20px;padding-top:10px;border-top:1px solid var(--line);color:var(--muted);font-size:.76rem}
     @media(max-width:720px){
@@ -55,14 +56,20 @@
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
 const categoryMeta=raw=>{
   const s=String(raw||"その他");
-  if(/イベント|キャンペーン/.test(s)) return {cls:"cat-event",label:s};
+  if(/イベント/.test(s)) return {cls:"cat-event",label:s};
+  if(/キャンペーン/.test(s)) return {cls:"cat-campaign",label:s};
   if(/ゲーム/.test(s)) return {cls:"cat-game",label:s};
   if(/書籍|雑誌|原作/.test(s)) return {cls:"cat-book",label:s};
   if(/アニメ/.test(s)) return {cls:"cat-anime",label:s};
   if(/グッズ|商品/.test(s)) return {cls:"cat-goods",label:s};
   return {cls:"cat-other",label:s};
 };
-const majorPeriod=x=>/^直近/.test(String(x.period_group||""))?"直近1ヶ月":"開催中・今後3ヶ月";
+const sectionLabel=x=>{
+  const p=String(x.period_group||"");
+  if(/^直近/.test(p)) return "直近1ヶ月の発売・公開・開催";
+  if(/開催中|実施中/.test(p)) return "現在開催中・配信中・実施中";
+  return "今後3カ月の発売・配信・開催予定";
+};
 const formatDate=raw=>{
   const s=String(raw||"");
   if(!s) return "";
@@ -72,21 +79,27 @@ const formatDate=raw=>{
 };
 const stripDatePrefix=s=>String(s||"").replace(/^\s*[^：:]{1,24}[：:]\s*/,"").trim();
 const primaryText=x=>{
-  if(x.display_text) return x.display_text;
+  if(x.display_text) return String(x.display_text);
   if(x.note) return stripDatePrefix(x.note);
   return x.title||"";
 };
+const splitDisplay=x=>{
+  const lines=primaryText(x).split(/\r?\n/).filter(Boolean);
+  return {headline:lines[0]||"",detail:lines.slice(1).join("\n")};
+};
 const renderItem=x=>{
   const cm=categoryMeta(x.category);
+  const t=splitDisplay(x);
   return `<article>
     <span class="date">${formatDate(x.date)}</span>
     <span class="cat ${cm.cls}">${esc(cm.label)}</span>
     <div class="maincell">
       <div class="titleline">
         ${x.url?'<a class="xlink" href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer" aria-label="元のX投稿を開く" title="元のX投稿を開く">𝕏</a>':""}
-        <span class="title">${esc(primaryText(x))}</span>
+        <span class="title">${esc(t.headline)}</span>
         ${x.is_new===true?'<span class="new-badge">NEW</span>':""}
       </div>
+      ${t.detail?'<div class="detail">'+esc(t.detail)+'</div>':""}
     </div>
   </article>`;
 };
@@ -94,9 +107,13 @@ fetch("./data/news.json",{cache:"no-store"}).then(r=>r.json()).then(data=>{
   const items=Array.isArray(data.items)?data.items:[];
   document.getElementById("updated").textContent=data.updated_at?"対象週 "+data.updated_at:"";
   if(!items.length){document.getElementById("content").innerHTML="<p>現在、掲載情報はありません。</p>";return;}
-  const groups={"直近1ヶ月":[],"開催中・今後3ヶ月":[]};
-  for(const x of items) groups[majorPeriod(x)].push(x);
-  const order=["直近1ヶ月","開催中・今後3ヶ月"];
+  const groups={
+    "直近1ヶ月の発売・公開・開催":[],
+    "現在開催中・配信中・実施中":[],
+    "今後3カ月の発売・配信・開催予定":[]
+  };
+  for(const x of items) groups[sectionLabel(x)].push(x);
+  const order=["直近1ヶ月の発売・公開・開催","現在開催中・配信中・実施中","今後3カ月の発売・配信・開催予定"];
   document.getElementById("content").innerHTML=order.filter(k=>groups[k].length).map(k=>
     '<section class="period"><h2 class="period-title">'+esc(k)+'</h2><div class="items">'+groups[k].map(renderItem).join("")+'</div></section>'
   ).join("");
