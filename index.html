@@ -24,7 +24,8 @@ article{display:grid;grid-template-columns:128px 90px 1fr;align-items:center;gap
 article:last-child{border-bottom:0}
 .date{font-size:.82rem;color:#3f3933;font-weight:650;line-height:1.2;white-space:normal}
 .cat{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:3px 7px;font-size:.72rem;font-weight:750;border:1px solid rgba(0,0,0,.08);white-space:nowrap}
-.cat-event{background:#4f9a72;color:#fff}.cat-game{background:#4c8fbd;color:#fff}.cat-book{background:#8d69ae;color:#fff}.cat-anime{background:#c34f4f;color:#fff}.cat-campaign{background:#d68b3f;color:#fff}.cat-goods{background:#c5a23a;color:#fff}.cat-other{background:#777;color:#fff}
+.cat-event{background:#3D8A66;color:#fff}.cat-game{background:#3978A8;color:#fff}.cat-book{background:#7B61A8;color:#fff}.cat-anime{background:#B85C5C;color:#fff}.cat-campaign{background:#B4772B;color:#fff}.cat-goods{background:#D36B44;color:#fff}.cat-other{background:#6C737D;color:#fff}
+.cat-figure{background:#B85C5C;color:#fff}.cat-plush{background:#8C6BB1;color:#fff}.cat-fashion{background:#C4773B;color:#fff}.cat-sticker{background:#3C8E87;color:#fff}.cat-card{background:#9FBE3F;color:#24300F}.cat-lottery{background:#B4772B;color:#fff}.cat-capsule{background:#3F7FB5;color:#fff}.cat-food{background:#A96C4D;color:#fff}.cat-stationery{background:#4D8B68;color:#fff}.cat-misc{background:#A65B86;color:#fff}.cat-multiple{background:#6C737D;color:#fff}
 .maincell{min-width:0}
 .titleline{display:flex;align-items:center;gap:7px;min-width:0}
 .xlink{display:inline-grid;place-items:center;flex:0 0 auto;width:23px;height:23px;border-radius:50%;background:#111;color:#fff;text-decoration:none;font-size:.78rem;font-weight:800;line-height:1}
@@ -55,14 +56,22 @@ footer{margin-top:20px;padding-top:10px;border-top:1px solid var(--line);color:v
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
 const dataUrls={info:"./data/news.json",goods:"./data/goods.json"};
 let currentKind="info";
-const categoryMeta=raw=>{
+const categoryMeta=(raw,kind)=>{
   const s=String(raw||"その他");
+  if(kind==="goods"){
+    const map={
+      "フィギュア":"cat-figure","ぬいぐるみ":"cat-plush","ファッション":"cat-fashion",
+      "シール":"cat-sticker","カード":"cat-card","一番くじ":"cat-lottery",
+      "カプセルトイ":"cat-capsule","食玩":"cat-food","文具":"cat-stationery",
+      "雑貨":"cat-misc","複数":"cat-multiple","グッズ":"cat-goods","その他":"cat-other"
+    };
+    return {cls:map[s]||"cat-other",label:s};
+  }
   if(/イベント/.test(s)) return {cls:"cat-event",label:s};
   if(/キャンペーン/.test(s)) return {cls:"cat-campaign",label:s};
   if(/ゲーム/.test(s)) return {cls:"cat-game",label:s};
   if(/書籍|雑誌|原作/.test(s)) return {cls:"cat-book",label:s};
   if(/アニメ/.test(s)) return {cls:"cat-anime",label:s};
-  if(/グッズ|商品|フィギュア|アパレル|雑貨|食品|プライズ|くじ/.test(s)) return {cls:"cat-goods",label:s};
   return {cls:"cat-other",label:s};
 };
 const formatDate=raw=>{
@@ -76,7 +85,7 @@ const splitDisplay=x=>{
   return {headline:lines[0]||"",detail:lines.slice(1).join("\n")};
 };
 const renderItem=x=>{
-  const cm=categoryMeta(x.category),t=splitDisplay(x);
+  const cm=categoryMeta(x.category,currentKind),t=splitDisplay(x);
   return `<article>
     <span class="date">${formatDate(x.date||x.display_date||"")}</span>
     <span class="cat ${cm.cls}">${esc(cm.label)}</span>
@@ -95,7 +104,13 @@ const sectionOrder={
   goods:["直近1ヶ月の発売・登場","今後1ヶ月の発売・登場予定","予約・受注受付中"]
 };
 const sectionFor=(x,kind)=>{
-  if(kind==="goods") return x.section||x.period_group||"その他";
+  if(kind==="goods"){
+    const s=String(x.section||x.period_group||"");
+    if(/^直近/.test(s)) return "直近1ヶ月の発売・登場";
+    if(/予約・受注/.test(s)) return "予約・受注受付中";
+    if(/発売・登場予定/.test(s)) return "今後1ヶ月の発売・登場予定";
+    return s||"その他";
+  }
   const p=String(x.period_group||"");
   if(/^直近/.test(p))return "直近1ヶ月の発売・公開・開催";
   if(/開催中|実施中/.test(p))return "現在開催中・配信中・実施中";
