@@ -1,46 +1,41 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>JOJO NEWS 週間まとめ 詳細一覧</title>
-  <meta name="description" content="JOJO NEWS週間まとめ画像に掲載した項目の詳細一覧です。">
-  <style>
-    :root{
-      color-scheme:light;
-      --bg:#f5efe5;--paper:#fffdf8;--text:#2d2925;--muted:#5f574f;
-      --line:#ddd2c3;--head:#eee4d5;--new:#d94a3e;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif;background:var(--bg);color:var(--text);line-height:1.35}
-    main{max-width:1120px;margin:14px auto 36px;padding:18px 22px 26px;background:var(--paper);border:1px solid #e1d7c8;border-radius:14px}
-    .headerline{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:2px}
-    h1{font-size:1.58rem;margin:0;letter-spacing:.02em}
-    .updated{font-size:.9rem;color:#4e4741;margin-left:auto;white-space:nowrap;font-weight:650}
-    .lead{color:var(--muted);margin:0 0 14px;font-size:.88rem}
-    .period{margin:18px 0 22px}
-    .period-title{margin:0 0 5px;padding:6px 9px;border-left:6px solid #514a44;background:var(--head);border-radius:6px;font-size:1.02rem;font-weight:800}
-    .items{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
-    article{display:grid;grid-template-columns:128px 90px 1fr;align-items:center;gap:9px;padding:7px 10px;border-bottom:1px solid #e7ddd0;min-height:40px}
-    article:last-child{border-bottom:0}
-    .date{font-size:.82rem;color:#3f3933;font-weight:650;line-height:1.2;white-space:normal}
-    .cat{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:3px 7px;font-size:.72rem;font-weight:750;border:1px solid rgba(0,0,0,.08);white-space:nowrap}
-    .cat-event{background:#4f9a72;color:#fff}.cat-game{background:#4c8fbd;color:#fff}.cat-book{background:#8d69ae;color:#fff}.cat-anime{background:#c34f4f;color:#fff}.cat-campaign{background:#d68b3f;color:#fff}.cat-goods{background:#c5a23a;color:#fff}.cat-other{background:#777;color:#fff}
-    .maincell{min-width:0}
-    .titleline{display:flex;align-items:center;gap:7px;min-width:0}
-    .xlink{display:inline-grid;place-items:center;flex:0 0 auto;width:23px;height:23px;border-radius:50%;background:#111;color:#fff;text-decoration:none;font-size:.78rem;font-weight:800;line-height:1}
-    .xlink:hover{opacity:.78}
-    .title{font-weight:720;font-size:.9rem;min-width:0}
-    .detail{margin:2px 0 0 30px;color:#4f4943;font-size:.79rem;white-space:pre-line;line-height:1.25}
-    .new-badge{display:inline-grid;place-items:center;flex:0 0 auto;width:32px;height:32px;margin-left:2px;background:var(--new);color:#fff;font-weight:900;font-size:.56rem;clip-path:polygon(50% 0%,61% 15%,78% 7%,82% 25%,100% 29%,89% 45%,100% 58%,82% 64%,81% 84%,62% 78%,50% 100%,39% 80%,20% 88%,19% 67%,0 61%,12% 45%,1% 30%,20% 25%,22% 7%,40% 16%)}
-    footer{margin-top:20px;padding-top:10px;border-top:1px solid var(--line);color:var(--muted);font-size:.76rem}
-    @media(max-width:720px){
-      main{margin:0;padding:14px 10px 24px;border:0;border-radius:0}
-      .updated{margin-left:0}
-      article{grid-template-columns:92px 72px 1fr;gap:6px;padding:7px 8px}
-      .date{font-size:.77rem}.cat{font-size:.68rem}.title{font-size:.86rem}
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JOJO NEWS 週間まとめ 詳細一覧</title>
+<meta name="description" content="JOJO NEWS週間まとめの詳細一覧です。">
+<style>
+:root{color-scheme:light;--bg:#f5efe5;--paper:#fffdf8;--text:#2d2925;--muted:#5f574f;--line:#ddd2c3;--head:#eee4d5;--new:#d94a3e}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif;background:var(--bg);color:var(--text);line-height:1.35}
+main{max-width:1120px;margin:14px auto 36px;padding:18px 22px 26px;background:var(--paper);border:1px solid #e1d7c8;border-radius:14px}
+.headerline{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:8px}
+h1{font-size:1.58rem;margin:0;letter-spacing:.02em}
+.updated{font-size:.9rem;color:#4e4741;margin-left:auto;white-space:nowrap;font-weight:650}
+.tabs{display:flex;gap:6px;margin:0 0 7px;border-bottom:1px solid var(--line)}
+.tab{appearance:none;border:1px solid var(--line);border-bottom:0;background:#f4ecdf;color:#514940;padding:7px 15px;border-radius:8px 8px 0 0;font-weight:750;font-size:.9rem;cursor:pointer}
+.tab.active{background:#fff;color:#171411;position:relative;top:1px}
+.lead{color:var(--muted);margin:0 0 12px;font-size:.86rem}
+.period{margin:18px 0 22px}
+.period-title{margin:0 0 5px;padding:6px 9px;border-left:6px solid #514a44;background:var(--head);border-radius:6px;font-size:1.02rem;font-weight:800}
+.items{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+article{display:grid;grid-template-columns:128px 90px 1fr;align-items:center;gap:9px;padding:7px 10px;border-bottom:1px solid #e7ddd0;min-height:40px}
+article:last-child{border-bottom:0}
+.date{font-size:.82rem;color:#3f3933;font-weight:650;line-height:1.2;white-space:normal}
+.cat{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:3px 7px;font-size:.72rem;font-weight:750;border:1px solid rgba(0,0,0,.08);white-space:nowrap}
+.cat-event{background:#4f9a72;color:#fff}.cat-game{background:#4c8fbd;color:#fff}.cat-book{background:#8d69ae;color:#fff}.cat-anime{background:#c34f4f;color:#fff}.cat-campaign{background:#d68b3f;color:#fff}.cat-goods{background:#c5a23a;color:#fff}.cat-other{background:#777;color:#fff}
+.maincell{min-width:0}
+.titleline{display:flex;align-items:center;gap:7px;min-width:0}
+.xlink{display:inline-grid;place-items:center;flex:0 0 auto;width:23px;height:23px;border-radius:50%;background:#111;color:#fff;text-decoration:none;font-size:.78rem;font-weight:800;line-height:1}
+.xlink:hover{opacity:.78}
+.title{font-weight:720;font-size:.9rem;min-width:0}
+.detail{margin:2px 0 0 30px;color:#4f4943;font-size:.79rem;white-space:pre-line;line-height:1.25}
+.new-badge{display:inline-grid;place-items:center;flex:0 0 auto;width:32px;height:32px;margin-left:2px;background:var(--new);color:#fff;font-weight:900;font-size:.56rem;clip-path:polygon(50% 0%,61% 15%,78% 7%,82% 25%,100% 29%,89% 45%,100% 58%,82% 64%,81% 84%,62% 78%,50% 100%,39% 80%,20% 88%,19% 67%,0 61%,12% 45%,1% 30%,20% 25%,22% 7%,40% 16%)}
+.empty{padding:18px;color:var(--muted)}
+footer{margin-top:20px;padding-top:10px;border-top:1px solid var(--line);color:var(--muted);font-size:.76rem}
+@media(max-width:720px){main{margin:0;padding:14px 10px 24px;border:0;border-radius:0}.updated{margin-left:0}.tabs{overflow-x:auto}.tab{white-space:nowrap}article{grid-template-columns:92px 72px 1fr;gap:6px;padding:7px 8px}.date{font-size:.77rem}.cat{font-size:.68rem}.title{font-size:.86rem}}
+</style>
 </head>
 <body>
 <main>
@@ -48,12 +43,18 @@
     <h1>JOJO NEWS 週間まとめ 詳細一覧</h1>
     <div id="updated" class="updated"></div>
   </div>
-  <p class="lead">週報画像と同じ区分・順番・表示文です。タイトル左の <strong>𝕏</strong> アイコンをクリックすると元の @jojonewsbot 投稿を開きます。</p>
-  <div id="content"><p>読み込み中です…</p></div>
+  <div class="tabs" role="tablist" aria-label="週間まとめ">
+    <button class="tab active" id="tab-info" data-kind="info" role="tab" aria-selected="true">ジョジョ関連情報</button>
+    <button class="tab" id="tab-goods" data-kind="goods" role="tab" aria-selected="false">ジョジョグッズ情報</button>
+  </div>
+  <p class="lead">タイトル左の <strong>𝕏</strong> アイコンをクリックすると元の @jojonewsbot 投稿を開きます。</p>
+  <div id="content"><p class="empty">読み込み中です…</p></div>
   <footer>公開ページは最新週のみを表示します。過去週データは非公開側で履歴管理します。</footer>
 </main>
 <script>
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+const dataUrls={info:"./data/news.json",goods:"./data/goods.json"};
+let currentKind="info";
 const categoryMeta=raw=>{
   const s=String(raw||"その他");
   if(/イベント/.test(s)) return {cls:"cat-event",label:s};
@@ -61,37 +62,23 @@ const categoryMeta=raw=>{
   if(/ゲーム/.test(s)) return {cls:"cat-game",label:s};
   if(/書籍|雑誌|原作/.test(s)) return {cls:"cat-book",label:s};
   if(/アニメ/.test(s)) return {cls:"cat-anime",label:s};
-  if(/グッズ|商品/.test(s)) return {cls:"cat-goods",label:s};
+  if(/グッズ|商品|フィギュア|アパレル|雑貨|食品|プライズ|くじ/.test(s)) return {cls:"cat-goods",label:s};
   return {cls:"cat-other",label:s};
 };
-const sectionLabel=x=>{
-  const p=String(x.period_group||"");
-  if(/^直近/.test(p)) return "直近1ヶ月の発売・公開・開催";
-  if(/開催中|実施中/.test(p)) return "現在開催中・配信中・実施中";
-  return "今後3カ月の発売・配信・開催予定";
-};
 const formatDate=raw=>{
-  const s=String(raw||"");
-  if(!s) return "";
+  const s=String(raw||""); if(!s)return "";
   const m=s.match(/^(.*?)(〜|～)(.*)$/);
-  if(!m) return esc(s);
+  if(!m)return esc(s);
   return esc(m[1]+m[2])+"<br>"+esc(m[3]);
 };
-const stripDatePrefix=s=>String(s||"").replace(/^\s*[^：:]{1,24}[：:]\s*/,"").trim();
-const primaryText=x=>{
-  if(x.display_text) return String(x.display_text);
-  if(x.note) return stripDatePrefix(x.note);
-  return x.title||"";
-};
 const splitDisplay=x=>{
-  const lines=primaryText(x).split(/\r?\n/).filter(Boolean);
+  const lines=String(x.display_text||x.title||"").split(/\r?\n/).filter(Boolean);
   return {headline:lines[0]||"",detail:lines.slice(1).join("\n")};
 };
 const renderItem=x=>{
-  const cm=categoryMeta(x.category);
-  const t=splitDisplay(x);
+  const cm=categoryMeta(x.category),t=splitDisplay(x);
   return `<article>
-    <span class="date">${formatDate(x.date)}</span>
+    <span class="date">${formatDate(x.date||x.display_date||"")}</span>
     <span class="cat ${cm.cls}">${esc(cm.label)}</span>
     <div class="maincell">
       <div class="titleline">
@@ -103,21 +90,45 @@ const renderItem=x=>{
     </div>
   </article>`;
 };
-fetch("./data/news.json",{cache:"no-store"}).then(r=>r.json()).then(data=>{
-  const items=Array.isArray(data.items)?data.items:[];
-  document.getElementById("updated").textContent=data.updated_at?"対象週 "+data.updated_at:"";
-  if(!items.length){document.getElementById("content").innerHTML="<p>現在、掲載情報はありません。</p>";return;}
-  const groups={
-    "直近1ヶ月の発売・公開・開催":[],
-    "現在開催中・配信中・実施中":[],
-    "今後3カ月の発売・配信・開催予定":[]
-  };
-  for(const x of items) groups[sectionLabel(x)].push(x);
-  const order=["直近1ヶ月の発売・公開・開催","現在開催中・配信中・実施中","今後3カ月の発売・配信・開催予定"];
-  document.getElementById("content").innerHTML=order.filter(k=>groups[k].length).map(k=>
-    '<section class="period"><h2 class="period-title">'+esc(k)+'</h2><div class="items">'+groups[k].map(renderItem).join("")+'</div></section>'
-  ).join("");
-}).catch(()=>{document.getElementById("content").innerHTML="<p>詳細一覧を読み込めませんでした。</p>";});
+const sectionOrder={
+  info:["直近1ヶ月の発売・公開・開催","現在開催中・配信中・実施中","今後3カ月の発売・配信・開催予定"],
+  goods:["直近1ヶ月の発売・登場","今後1ヶ月の発売・登場予定","予約・受注受付中"]
+};
+const sectionFor=(x,kind)=>{
+  if(kind==="goods") return x.section||x.period_group||"その他";
+  const p=String(x.period_group||"");
+  if(/^直近/.test(p))return "直近1ヶ月の発売・公開・開催";
+  if(/開催中|実施中/.test(p))return "現在開催中・配信中・実施中";
+  return "今後3カ月の発売・配信・開催予定";
+};
+const formatUpdated=s=>{
+  const m=String(s||"").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if(!m)return s||"";
+  return `${Number(m[1])}/${Number(m[2])}/${Number(m[3])} 更新`;
+};
+async function loadKind(kind){
+  currentKind=kind;
+  document.querySelectorAll(".tab").forEach(b=>{const on=b.dataset.kind===kind;b.classList.toggle("active",on);b.setAttribute("aria-selected",on?"true":"false")});
+  const content=document.getElementById("content");
+  content.innerHTML='<p class="empty">読み込み中です…</p>';
+  try{
+    const r=await fetch(dataUrls[kind],{cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const data=await r.json(),items=Array.isArray(data.items)?data.items:[];
+    document.getElementById("updated").textContent=formatUpdated(data.updated_at);
+    if(!items.length){content.innerHTML='<p class="empty">現在、掲載情報はありません。</p>';return;}
+    const groups={};
+    for(const x of items){const k=sectionFor(x,kind);(groups[k]??=[]).push(x);}
+    const preferred=sectionOrder[kind];
+    const keys=[...preferred.filter(k=>groups[k]?.length),...Object.keys(groups).filter(k=>!preferred.includes(k))];
+    content.innerHTML=keys.map(k=>'<section class="period"><h2 class="period-title">'+esc(k)+'</h2><div class="items">'+groups[k].map(renderItem).join("")+'</div></section>').join("");
+  }catch(e){
+    document.getElementById("updated").textContent="";
+    content.innerHTML='<p class="empty">この一覧はまだ公開されていません。</p>';
+  }
+}
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>loadKind(b.dataset.kind)));
+loadKind("info");
 </script>
 </body>
 </html>
