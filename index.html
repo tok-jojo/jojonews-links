@@ -8,39 +8,36 @@
   <style>
     :root{
       color-scheme:light;
-      --bg:#f5efe5;--paper:#fffdf8;--text:#2d2925;--muted:#756d64;
-      --line:#ddd2c3;--head:#eee4d5;--link:#111;--new:#d94a3e;
+      --bg:#f5efe5;--paper:#fffdf8;--text:#2d2925;--muted:#5f574f;
+      --line:#ddd2c3;--head:#eee4d5;--new:#d94a3e;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif;background:var(--bg);color:var(--text);line-height:1.45}
-    main{max-width:1100px;margin:18px auto 40px;padding:20px 24px 30px;background:var(--paper);border:1px solid #e1d7c8;border-radius:14px}
-    .headerline{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:4px}
-    h1{font-size:1.65rem;margin:0;letter-spacing:.02em}
-    .updated{font-size:.9rem;color:var(--muted);margin-left:auto;white-space:nowrap}
-    .lead{color:var(--muted);margin:0 0 18px;font-size:.92rem}
-    .period{margin:22px 0 26px}
-    .period-title{margin:0 0 6px;padding:7px 10px;border-left:6px solid #514a44;background:var(--head);border-radius:6px;font-size:1.08rem;font-weight:800}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif;background:var(--bg);color:var(--text);line-height:1.35}
+    main{max-width:1120px;margin:14px auto 36px;padding:18px 22px 26px;background:var(--paper);border:1px solid #e1d7c8;border-radius:14px}
+    .headerline{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:2px}
+    h1{font-size:1.58rem;margin:0;letter-spacing:.02em}
+    .updated{font-size:.9rem;color:#4e4741;margin-left:auto;white-space:nowrap;font-weight:650}
+    .lead{color:var(--muted);margin:0 0 14px;font-size:.88rem}
+    .period{margin:18px 0 22px}
+    .period-title{margin:0 0 5px;padding:6px 9px;border-left:6px solid #514a44;background:var(--head);border-radius:6px;font-size:1.02rem;font-weight:800}
     .items{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
-    article{display:grid;grid-template-columns:92px minmax(130px,190px) 1fr;align-items:center;gap:10px;padding:8px 10px;border-bottom:1px solid #e7ddd0;min-height:44px}
+    article{display:grid;grid-template-columns:128px 90px 1fr;align-items:center;gap:9px;padding:7px 10px;border-bottom:1px solid #e7ddd0;min-height:40px}
     article:last-child{border-bottom:0}
-    .cat{display:inline-flex;align-items:center;justify-content:center;gap:4px;border-radius:999px;padding:3px 7px;font-size:.72rem;font-weight:750;border:1px solid rgba(0,0,0,.08);white-space:nowrap}
+    .date{font-size:.82rem;color:#3f3933;font-weight:650;line-height:1.2;white-space:normal}
+    .cat{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:3px 7px;font-size:.72rem;font-weight:750;border:1px solid rgba(0,0,0,.08);white-space:nowrap}
     .cat-event{background:#f6d3bb}.cat-game{background:#cfe1f2}.cat-book{background:#ddd3ef}.cat-anime{background:#cfe5c7}.cat-goods{background:#f4e3a9}.cat-other{background:#e2ded8}
-    .date{font-size:.82rem;color:var(--muted);white-space:nowrap}
     .maincell{min-width:0}
     .titleline{display:flex;align-items:center;gap:7px;min-width:0}
-    .xlink{display:inline-grid;place-items:center;flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:#111;color:#fff;text-decoration:none;font-size:.79rem;font-weight:800;line-height:1}
+    .xlink{display:inline-grid;place-items:center;flex:0 0 auto;width:23px;height:23px;border-radius:50%;background:#111;color:#fff;text-decoration:none;font-size:.78rem;font-weight:800;line-height:1}
     .xlink:hover{opacity:.78}
-    .title{font-weight:720;font-size:.92rem;min-width:0}
-    .note{color:#5c554e;font-size:.8rem;margin-top:2px;white-space:pre-line}
-    .new-badge{display:inline-grid;place-items:center;flex:0 0 auto;width:34px;height:34px;margin-left:2px;background:var(--new);color:#fff;font-weight:900;font-size:.58rem;clip-path:polygon(50% 0%,61% 15%,78% 7%,82% 25%,100% 29%,89% 45%,100% 58%,82% 64%,81% 84%,62% 78%,50% 100%,39% 80%,20% 88%,19% 67%,0 61%,12% 45%,1% 30%,20% 25%,22% 7%,40% 16%)}
-    footer{margin-top:24px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:.78rem}
+    .title{font-weight:720;font-size:.9rem;min-width:0;white-space:pre-line}
+    .new-badge{display:inline-grid;place-items:center;flex:0 0 auto;width:32px;height:32px;margin-left:2px;background:var(--new);color:#fff;font-weight:900;font-size:.56rem;clip-path:polygon(50% 0%,61% 15%,78% 7%,82% 25%,100% 29%,89% 45%,100% 58%,82% 64%,81% 84%,62% 78%,50% 100%,39% 80%,20% 88%,19% 67%,0 61%,12% 45%,1% 30%,20% 25%,22% 7%,40% 16%)}
+    footer{margin-top:20px;padding-top:10px;border-top:1px solid var(--line);color:var(--muted);font-size:.76rem}
     @media(max-width:720px){
-      main{margin:0;padding:16px 12px 28px;border:0;border-radius:0}
+      main{margin:0;padding:14px 10px 24px;border:0;border-radius:0}
       .updated{margin-left:0}
-      article{grid-template-columns:82px 1fr;gap:5px 8px;padding:8px}
-      .date{grid-column:2}
-      .maincell{grid-column:1 / -1}
-      .title{font-size:.9rem}
+      article{grid-template-columns:92px 72px 1fr;gap:6px;padding:7px 8px}
+      .date{font-size:.77rem}.cat{font-size:.68rem}.title{font-size:.86rem}
     }
   </style>
 </head>
@@ -50,7 +47,7 @@
     <h1>JOJO NEWS 週間まとめ 詳細一覧</h1>
     <div id="updated" class="updated"></div>
   </div>
-  <p class="lead">週報画像と同じ区分・順番です。タイトル左の <strong>𝕏</strong> アイコンをクリックすると元の @jojonewsbot 投稿を開きます。</p>
+  <p class="lead">週報画像と同じ区分・順番・表示文です。タイトル左の <strong>𝕏</strong> アイコンをクリックすると元の @jojonewsbot 投稿を開きます。</p>
   <div id="content"><p>読み込み中です…</p></div>
   <footer>公開ページは最新週のみを表示します。過去週データは非公開側で履歴管理します。</footer>
 </main>
@@ -58,26 +55,38 @@
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
 const categoryMeta=raw=>{
   const s=String(raw||"その他");
-  if(/イベント|キャンペーン/.test(s)) return {icon:"●",cls:"cat-event",label:s};
-  if(/ゲーム/.test(s)) return {icon:"◆",cls:"cat-game",label:s};
-  if(/書籍|雑誌|原作/.test(s)) return {icon:"▤",cls:"cat-book",label:s};
-  if(/アニメ/.test(s)) return {icon:"▶",cls:"cat-anime",label:s};
-  if(/グッズ|商品/.test(s)) return {icon:"■",cls:"cat-goods",label:s};
-  return {icon:"•",cls:"cat-other",label:s};
+  if(/イベント|キャンペーン/.test(s)) return {cls:"cat-event",label:s};
+  if(/ゲーム/.test(s)) return {cls:"cat-game",label:s};
+  if(/書籍|雑誌|原作/.test(s)) return {cls:"cat-book",label:s};
+  if(/アニメ/.test(s)) return {cls:"cat-anime",label:s};
+  if(/グッズ|商品/.test(s)) return {cls:"cat-goods",label:s};
+  return {cls:"cat-other",label:s};
 };
 const majorPeriod=x=>/^直近/.test(String(x.period_group||""))?"直近1ヶ月":"開催中・今後3ヶ月";
+const formatDate=raw=>{
+  const s=String(raw||"");
+  if(!s) return "";
+  const m=s.match(/^(.*?)(〜|～)(.*)$/);
+  if(!m) return esc(s);
+  return esc(m[1]+m[2])+"<br>"+esc(m[3]);
+};
+const stripDatePrefix=s=>String(s||"").replace(/^\s*[^：:]{1,24}[：:]\s*/,"").trim();
+const primaryText=x=>{
+  if(x.display_text) return x.display_text;
+  if(x.note) return stripDatePrefix(x.note);
+  return x.title||"";
+};
 const renderItem=x=>{
   const cm=categoryMeta(x.category);
   return `<article>
-    <span class="cat ${cm.cls}"><span aria-hidden="true">${cm.icon}</span>${esc(cm.label)}</span>
-    <span class="date">${esc(x.date||"")}</span>
+    <span class="date">${formatDate(x.date)}</span>
+    <span class="cat ${cm.cls}">${esc(cm.label)}</span>
     <div class="maincell">
       <div class="titleline">
         ${x.url?'<a class="xlink" href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer" aria-label="元のX投稿を開く" title="元のX投稿を開く">𝕏</a>':""}
-        <span class="title">${esc(x.title||"")}</span>
+        <span class="title">${esc(primaryText(x))}</span>
         ${x.is_new===true?'<span class="new-badge">NEW</span>':""}
       </div>
-      ${x.note?'<div class="note">'+esc(x.note)+'</div>':""}
     </div>
   </article>`;
 };
