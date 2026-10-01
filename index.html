@@ -148,8 +148,17 @@ async function loadKind(kind){
     content.innerHTML='<p class="empty">この一覧はまだ公開されていません。</p>';
   }
 }
-document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>loadKind(b.dataset.kind)));
-loadKind("info");
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{
+  const kind=b.dataset.kind;
+  const url=new URL(location.href);
+  if(kind==="goods") url.searchParams.set("tab","goods");
+  else url.searchParams.delete("tab");
+  history.replaceState(null,"",url);
+  loadKind(kind);
+}));
+const params=new URLSearchParams(location.search);
+const initialKind=params.get("tab")==="goods"?"goods":"info";
+loadKind(initialKind);
 </script>
 </body>
 </html>
