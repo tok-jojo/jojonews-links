@@ -4,62 +4,186 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>JOJO NEWS 週間まとめ 詳細一覧</title>
-  <meta name="description" content="JOJO NEWSで紹介したジョジョ／荒木飛呂彦関連情報の公式リンク集です。">
+  <meta name="description" content="JOJO NEWS週間まとめ画像に掲載した項目の詳細一覧です。">
   <style>
-    :root{color-scheme:light dark;--bg:#111;--card:#1b1b1b;--text:#f5f5f5;--muted:#aaa;--line:#333;--accent:#ddd}
+    :root{
+      color-scheme:light;
+      --bg:#f6f0e4;
+      --paper:#fffdf8;
+      --card:#ffffff;
+      --text:#2e2924;
+      --muted:#756d64;
+      --line:#d9cfbf;
+      --section:#4f4740;
+      --link:#4b5f78;
+      --new:#d94a3e;
+    }
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
-    main{max-width:900px;margin:auto;padding:24px 16px 56px}
-    h1{font-size:1.8rem;margin:0 0 8px}
-    .lead{color:var(--muted);margin:0 0 28px}
-    .updated{font-size:.9rem;color:var(--muted);margin-bottom:20px}
-    section{margin:28px 0}
-    h2{font-size:1.25rem;border-bottom:1px solid var(--line);padding-bottom:8px}
-    article{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0}
-    .meta{font-size:.85rem;color:var(--muted);margin-bottom:5px}
-    .title{font-weight:700;margin-bottom:8px}
-    a{color:var(--accent);overflow-wrap:anywhere}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,.22),rgba(255,255,255,.22)),
+        repeating-linear-gradient(0deg,rgba(85,70,50,.025) 0,rgba(85,70,50,.025) 1px,transparent 1px,transparent 5px),
+        var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    main{
+      max-width:980px;
+      margin:28px auto 64px;
+      padding:28px 22px 46px;
+      background:var(--paper);
+      border:1px solid #e2d8c8;
+      border-radius:18px;
+      box-shadow:0 10px 30px rgba(70,55,35,.08);
+    }
+    h1{font-size:1.85rem;margin:0 0 8px;letter-spacing:.02em}
+    .lead{color:var(--muted);margin:0 0 22px}
+    .updated{font-size:.95rem;color:var(--muted);margin:0 0 30px}
+    .period{margin:34px 0 42px}
+    .period-title{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin:0 0 14px;
+      padding:9px 14px;
+      border-left:7px solid var(--section);
+      background:#eee5d8;
+      border-radius:8px;
+      font-size:1.28rem;
+      font-weight:800;
+    }
+    .items{display:grid;gap:10px}
+    article{
+      position:relative;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:14px 16px 14px 16px;
+      box-shadow:0 2px 8px rgba(80,65,45,.035);
+    }
+    .topline{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:7px;
+      padding-right:54px;
+    }
+    .date{font-size:.92rem;color:var(--muted)}
+    .cat{
+      display:inline-flex;
+      align-items:center;
+      gap:5px;
+      border-radius:999px;
+      padding:3px 9px;
+      font-size:.78rem;
+      font-weight:750;
+      border:1px solid rgba(0,0,0,.08);
+      white-space:nowrap;
+    }
+    .cat-event{background:#f6d3bb}
+    .cat-game{background:#cfe1f2}
+    .cat-book{background:#ddd3ef}
+    .cat-anime{background:#cfe5c7}
+    .cat-goods{background:#f4e3a9}
+    .cat-other{background:#e2ded8}
+    .new-badge{
+      position:absolute;
+      right:12px;
+      top:10px;
+      display:grid;
+      place-items:center;
+      width:46px;
+      height:46px;
+      background:var(--new);
+      color:#fff;
+      font-weight:900;
+      font-size:.72rem;
+      letter-spacing:.02em;
+      clip-path:polygon(50% 0%,61% 15%,78% 7%,82% 25%,100% 29%,89% 45%,100% 58%,82% 64%,81% 84%,62% 78%,50% 100%,39% 80%,20% 88%,19% 67%,0 61%,12% 45%,1% 30%,20% 25%,22% 7%,40% 16%);
+      filter:drop-shadow(0 2px 2px rgba(0,0,0,.12));
+    }
+    .title{font-weight:750;font-size:1.03rem;margin:2px 0 8px}
+    .note{color:#514b45;font-size:.94rem;margin:0 0 8px;white-space:pre-line}
+    a{
+      display:inline-block;
+      color:var(--link);
+      text-decoration-thickness:1px;
+      text-underline-offset:3px;
+      font-size:.93rem;
+    }
     .empty{color:var(--muted)}
-    footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+    footer{
+      margin-top:36px;
+      padding-top:16px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:.85rem;
+    }
+    @media(max-width:640px){
+      body{background:var(--bg)}
+      main{margin:0;padding:22px 14px 38px;border:0;border-radius:0;box-shadow:none}
+      h1{font-size:1.5rem}
+      .period-title{font-size:1.12rem}
+      article{padding:13px 13px}
+      .topline{padding-right:48px}
+    }
   </style>
 </head>
 <body>
 <main>
   <h1>JOJO NEWS 週間まとめ 詳細一覧</h1>
-  <p class="lead">週報画像に掲載した項目を、画像と同じ分類・順番で確認できます。各項目から元の @jojonewsbot 投稿を開けます。</p>
+  <p class="lead">週報画像と同じ区分・順番で掲載しています。各項目から元の @jojonewsbot 投稿を確認できます。</p>
   <div id="updated" class="updated"></div>
   <div id="content"><p class="empty">読み込み中です…</p></div>
-  <footer>
-    このページは週報の詳細一覧です。各項目のリンクから元の @jojonewsbot 投稿を確認できます。
-  </footer>
+  <footer>このページは週報画像の詳細一覧です。NEW・カテゴリ・掲載順は週報生成時の確認済みデータを使用します。</footer>
 </main>
 <script>
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+const categoryMeta=(raw)=>{
+  const s=String(raw||"その他");
+  if(/イベント/.test(s)) return {icon:"●",cls:"cat-event",label:s};
+  if(/ゲーム/.test(s)) return {icon:"◆",cls:"cat-game",label:s};
+  if(/書籍|雑誌|原作/.test(s)) return {icon:"▤",cls:"cat-book",label:s};
+  if(/アニメ/.test(s)) return {icon:"▶",cls:"cat-anime",label:s};
+  if(/グッズ|商品/.test(s)) return {icon:"■",cls:"cat-goods",label:s};
+  return {icon:"•",cls:"cat-other",label:s};
+};
 fetch("./data/news.json",{cache:"no-store"}).then(r=>r.json()).then(data=>{
   const items=Array.isArray(data.items)?data.items:[];
   document.getElementById("updated").textContent=data.updated_at ? "対象週: "+data.updated_at : "";
-  if(!items.length){document.getElementById("content").innerHTML='<p class="empty">現在、掲載情報はありません。</p>';return;}
+  if(!items.length){
+    document.getElementById("content").innerHTML='<p class="empty">現在、掲載情報はありません。</p>';
+    return;
+  }
   let html="";
-  let currentCategory=null;
+  let current=null;
   for(const x of items){
-    const category=x.category||"その他";
-    if(category!==currentCategory){
-      if(currentCategory!==null) html+="</section>";
-      html+='<section><h2>'+esc(category)+'</h2>';
-      currentCategory=category;
+    const period=x.period_group||x.section||"週報掲載項目";
+    if(period!==current){
+      if(current!==null) html+="</div></section>";
+      html+='<section class="period"><h2 class="period-title">'+esc(period)+'</h2><div class="items">';
+      current=period;
     }
+    const cm=categoryMeta(x.category);
     html+=`
       <article>
-        <div class="meta">${esc(x.date||"")}</div>
+        ${x.is_new===true?'<div class="new-badge">NEW</div>':""}
+        <div class="topline">
+          <span class="cat ${cm.cls}"><span aria-hidden="true">${cm.icon}</span>${esc(cm.label)}</span>
+          <span class="date">${esc(x.date||"")}</span>
+        </div>
         <div class="title">${esc(x.title||"")}</div>
-        ${x.note?'<div>'+esc(x.note)+'</div>':""}
-        ${x.url?'<div><a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">元のX投稿を開く</a></div>':""}
+        ${x.note?'<div class="note">'+esc(x.note)+'</div>':""}
+        ${x.url?'<a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">元のX投稿を開く</a>':""}
       </article>`;
   }
-  if(currentCategory!==null) html+="</section>";
+  if(current!==null) html+="</div></section>";
   document.getElementById("content").innerHTML=html;
 }).catch(()=>{
-  document.getElementById("content").innerHTML='<p class="empty">リンク集を読み込めませんでした。</p>';
+  document.getElementById("content").innerHTML='<p class="empty">詳細一覧を読み込めませんでした。</p>';
 });
 </script>
 </body>
