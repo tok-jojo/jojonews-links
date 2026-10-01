@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JOJO NEWS 公式リンク集</title>
+  <meta name="description" content="JOJO NEWSで紹介したジョジョ／荒木飛呂彦関連情報の公式リンク集です。">
+  <style>
+    :root{color-scheme:light dark;--bg:#111;--card:#1b1b1b;--text:#f5f5f5;--muted:#aaa;--line:#333;--accent:#ddd}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    main{max-width:900px;margin:auto;padding:24px 16px 56px}
+    h1{font-size:1.8rem;margin:0 0 8px}
+    .lead{color:var(--muted);margin:0 0 28px}
+    .updated{font-size:.9rem;color:var(--muted);margin-bottom:20px}
+    section{margin:28px 0}
+    h2{font-size:1.25rem;border-bottom:1px solid var(--line);padding-bottom:8px}
+    article{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0}
+    .meta{font-size:.85rem;color:var(--muted);margin-bottom:5px}
+    .title{font-weight:700;margin-bottom:8px}
+    a{color:var(--accent);overflow-wrap:anywhere}
+    .empty{color:var(--muted)}
+    footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+<main>
+  <h1>JOJO NEWS 公式リンク集</h1>
+  <p class="lead">JOJO NEWSで紹介した情報の公式サイト・公式Xなど、公開済みの参照先をまとめています。</p>
+  <div id="updated" class="updated"></div>
+  <div id="content"><p class="empty">読み込み中です…</p></div>
+  <footer>
+    このページは公開情報へのリンク集です。各情報の詳細・変更・販売状況等はリンク先の公式情報をご確認ください。
+  </footer>
+</main>
+<script>
+const order=["アニメ","原作・書籍","ゲーム","グッズ","イベント","その他"];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+fetch("./data/news.json",{cache:"no-store"}).then(r=>r.json()).then(data=>{
+  const items=Array.isArray(data.items)?data.items:[];
+  document.getElementById("updated").textContent=data.updated_at ? "最終更新: "+data.updated_at : "";
+  if(!items.length){document.getElementById("content").innerHTML='<p class="empty">現在、掲載情報はありません。</p>';return;}
+  const groups={};
+  for(const x of items){const c=x.category||"その他";(groups[c]??=[]).push(x);}
+  const cats=[...order.filter(c=>groups[c]),...Object.keys(groups).filter(c=>!order.includes(c)).sort()];
+  document.getElementById("content").innerHTML=cats.map(c=>{
+    const rows=groups[c].sort((a,b)=>(b.date||"").localeCompare(a.date||"")).map(x=>`
+      <article>
+        <div class="meta">${esc(x.date||"")} ${x.source_type?"／"+esc(x.source_type):""}</div>
+        <div class="title">${esc(x.title||"")}</div>
+        ${x.note?'<div>'+esc(x.note)+'</div>':""}
+        ${x.url?'<div><a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">公式情報を開く</a></div>':""}
+      </article>`).join("");
+    return `<section><h2>${esc(c)}</h2>${rows}</section>`;
+  }).join("");
+}).catch(()=>{
+  document.getElementById("content").innerHTML='<p class="empty">リンク集を読み込めませんでした。</p>';
+});
+</script>
+</body>
+</html>
