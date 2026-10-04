@@ -105,13 +105,14 @@ const renderItem=x=>{
 };
 const sectionOrder={
   info:["直近1ヶ月の発売・公開・開催","現在開催中・配信中・実施中","今後3カ月の発売・配信・開催予定"],
-  goods:["直近1ヶ月の発売・登場","今後1ヶ月の発売・登場予定","予約・受注受付中"]
+  goods:["直近1ヶ月の発売・登場","今後1ヶ月の発売・登場予定","予約・受注受付中","予約・受注受付予定"]
 };
 const sectionFor=(x,kind)=>{
   if(kind==="goods"){
     const s=String(x.section||x.period_group||"");
     if(/^直近/.test(s)) return "直近1ヶ月の発売・登場";
-    if(/予約・受注/.test(s)) return "予約・受注受付中";
+    if(/予約・受注受付予定/.test(s)) return "予約・受注受付予定";
+    if(/予約・受注受付中/.test(s)) return "予約・受注受付中";
     if(/発売・登場予定/.test(s)) return "今後1ヶ月の発売・登場予定";
     return s||"その他";
   }
