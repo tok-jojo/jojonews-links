@@ -1,8 +1,28 @@
-# JOJO NEWS 週間まとめ 詳細一覧
+# JOJO NEWS 公式リンク集
 
-GitHub Pages で公開している JOJO NEWS 週間まとめ詳細一覧のリポジトリです。
+Xアカウント「JOJO NEWS」で紹介したジョジョ／荒木飛呂彦関連情報の、公式サイト・公式Xなどへの公開リンク集です。
 
-- 公開ページ: https://tok-jojo.github.io/jojonews-links/
-- `index.html`: 週間まとめの一覧表示
-- `data/`: 表示用JSON
-- favicon / title icon: JOJO NEWS icon
+## 公開データ
+
+- `index.html`: GitHub Pages用の表示ページ
+- `data/news.json`: 掲載データ
+
+`data/news.json` の形式:
+
+```json
+{
+  "updated_at": "2026-10-01",
+  "items": [
+    {
+      "date": "2026-10-01",
+      "category": "グッズ",
+      "title": "ニュースタイトル",
+      "source_type": "公式サイト",
+      "url": "https://example.com/",
+      "note": "任意の補足"
+    }
+  ]
+}
+```
+
+BOT本体・APIキー・ログ・管理用データはこの公開リポジトリには保存しません。
