@@ -8,6 +8,13 @@
 <link rel="icon" href="./favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D2PXY9ZC0T"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-D2PXY9ZC0T');
+</script>
 <style>
 :root{color-scheme:light;--bg:#f5efe5;--paper:#fffdf8;--text:#2d2925;--muted:#5f574f;--line:#ddd2c3;--head:#eee4d5;--new:#d94a3e}
 *{box-sizing:border-box}
@@ -160,8 +167,27 @@ document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{
   if(kind==="goods") url.searchParams.set("tab","goods");
   else url.searchParams.delete("tab");
   history.replaceState(null,"",url);
+  if(typeof gtag==="function"){
+    gtag('event','tab_change',{tab_kind:kind,tab_label:b.textContent.trim()});
+  }
   loadKind(kind);
 }));
+document.addEventListener("click",event=>{
+  const link=event.target.closest("a.xlink");
+  if(!link || typeof gtag!=="function") return;
+  const article=link.closest("article");
+  const title=article?.querySelector(".title")?.textContent?.trim()||"";
+  const category=article?.querySelector(".cat")?.textContent?.trim()||"";
+  const date=article?.querySelector(".date")?.textContent?.replace(/\s+/g," ")?.trim()||"";
+  gtag('event','x_link_click',{
+    link_url:link.href,
+    article_title:title,
+    article_category:category,
+    article_date:date,
+    tab_kind:currentKind,
+    tab_label:currentKind==="goods"?"ジョジョグッズ情報":"ジョジョ関連情報"
+  });
+});
 const params=new URLSearchParams(location.search);
 const initialKind=params.get("tab")==="goods"?"goods":"info";
 loadKind(initialKind);
