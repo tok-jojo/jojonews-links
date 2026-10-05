@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>JOJO NEWS 週間まとめ 詳細一覧</title>
 <meta name="description" content="JOJO NEWS週間まとめの詳細一覧です。">
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
 <style>
 :root{color-scheme:light;--bg:#f5efe5;--paper:#fffdf8;--text:#2d2925;--muted:#5f574f;--line:#ddd2c3;--head:#eee4d5;--new:#d94a3e}
 *{box-sizing:border-box}
@@ -12,6 +15,8 @@ body{margin:0;font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans
 main{max-width:1120px;margin:14px auto 36px;padding:18px 22px 26px;background:var(--paper);border:1px solid #e1d7c8;border-radius:14px}
 .headerline{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:8px}
 h1{font-size:1.58rem;margin:0;letter-spacing:.02em}
+.site-title{display:inline-flex;align-items:center;gap:.42em}
+.site-title-icon{width:1em;height:1em;object-fit:contain;flex:0 0 auto}
 .updated{font-size:.9rem;color:#4e4741;margin-left:auto;white-space:nowrap;font-weight:650}
 .tabs{display:flex;gap:6px;margin:0 0 7px;border-bottom:1px solid var(--line)}
 .tab{appearance:none;border:1px solid var(--line);border-bottom:0;background:#f4ecdf;color:#514940;padding:7px 15px;border-radius:8px 8px 0 0;font-weight:750;font-size:.9rem;cursor:pointer}
@@ -41,7 +46,7 @@ footer{margin-top:20px;padding-top:10px;border-top:1px solid var(--line);color:v
 <body>
 <main>
   <div class="headerline">
-    <h1>JOJO NEWS 週間まとめ 詳細一覧</h1>
+    <h1 class="site-title"><img src="./jojo-news-icon.png" alt="" class="site-title-icon" aria-hidden="true">JOJO NEWS 週間まとめ 詳細一覧</h1>
     <div id="updated" class="updated"></div>
   </div>
   <div class="tabs" role="tablist" aria-label="週間まとめ">
