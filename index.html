@@ -181,6 +181,9 @@ document.addEventListener("click",event=>{
   const date=article?.querySelector(".date")?.textContent?.replace(/\s+/g," ")?.trim()||"";
   gtag('event','x_link_click',{
     link_url:link.href,
+    link_text:title,
+    item_category:category,
+    item_date:date,
     article_title:title,
     article_category:category,
     article_date:date,
