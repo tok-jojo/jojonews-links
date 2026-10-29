@@ -3,7 +3,7 @@
   "items": [
     {
       "date": "2026年5月9日〜11月22日",
-      "period_group": "今後1ヶ月",
+      "period_group": "現在開催中・配信中・実施中",
       "section": "",
       "category": "イベント",
       "is_new": false,
@@ -15,7 +15,7 @@
     },
     {
       "date": "2026年9月21日～12月",
-      "period_group": "今後1ヶ月",
+      "period_group": "現在開催中・配信中・実施中",
       "section": "",
       "category": "キャンペーン",
       "is_new": false,
@@ -27,7 +27,7 @@
     },
     {
       "date": "2026年9月25日〜12月31日",
-      "period_group": "今後1ヶ月",
+      "period_group": "現在開催中・配信中・実施中",
       "section": "",
       "category": "ゲーム",
       "is_new": false,
@@ -39,7 +39,7 @@
     },
     {
       "date": "2026年9月30日",
-      "period_group": "直近1ヶ月",
+      "period_group": "直近1か月の発売・配信・開催情報",
       "section": "",
       "category": "書籍 雑誌",
       "is_new": false,
@@ -51,7 +51,7 @@
     },
     {
       "date": "2026年10月2日",
-      "period_group": "直近1ヶ月",
+      "period_group": "直近1か月の発売・配信・開催情報",
       "section": "",
       "category": "アニメ",
       "is_new": false,
@@ -63,7 +63,7 @@
     },
     {
       "date": "2026年10月2日〜11月1日",
-      "period_group": "今後1ヶ月",
+      "period_group": "現在開催中・配信中・実施中",
       "section": "",
       "category": "イベント",
       "is_new": false,
@@ -75,7 +75,7 @@
     },
     {
       "date": "2026年10月3日〜1月31日",
-      "period_group": "今後1ヶ月",
+      "period_group": "現在開催中・配信中・実施中",
       "section": "",
       "category": "イベント",
       "is_new": false,
@@ -87,7 +87,7 @@
     },
     {
       "date": "2026年10月9日",
-      "period_group": "直近1ヶ月",
+      "period_group": "直近1か月の発売・配信・開催情報",
       "section": "",
       "category": "アニメ",
       "is_new": false,
@@ -99,7 +99,7 @@
     },
     {
       "date": "2026年10月9日",
-      "period_group": "直近1ヶ月",
+      "period_group": "直近1か月の発売・配信・開催情報",
       "section": "",
       "category": "書籍 雑誌",
       "is_new": false,
@@ -111,7 +111,7 @@
     },
     {
       "date": "2026年10月9日〜11月23日",
-      "period_group": "今後1ヶ月",
+      "period_group": "現在開催中・配信中・実施中",
       "section": "",
       "category": "キャンペーン",
       "is_new": false,
@@ -123,7 +123,7 @@
     },
     {
       "date": "2026年10月16日",
-      "period_group": "直近1ヶ月",
+      "period_group": "直近1か月の発売・配信・開催情報",
       "section": "",
       "category": "アニメ",
       "is_new": false,
@@ -135,7 +135,7 @@
     },
     {
       "date": "2026年10月16日〜11月16日",
-      "period_group": "今後1ヶ月",
+      "period_group": "現在開催中・配信中・実施中",
       "section": "",
       "category": "イベント",
       "is_new": false,
@@ -147,7 +147,7 @@
     },
     {
       "date": "2026年10月19日",
-      "period_group": "直近1ヶ月",
+      "period_group": "直近1か月の発売・配信・開催情報",
       "section": "",
       "category": "書籍 雑誌",
       "is_new": false,
@@ -159,7 +159,7 @@
     },
     {
       "date": "2026年10月23日",
-      "period_group": "直近1ヶ月",
+      "period_group": "直近1か月の発売・配信・開催情報",
       "section": "",
       "category": "アニメ",
       "is_new": true,
@@ -171,7 +171,7 @@
     },
     {
       "date": "2026年10月24日～25日",
-      "period_group": "直近1ヶ月",
+      "period_group": "直近1か月の発売・配信・開催情報",
       "section": "",
       "category": "イベント",
       "is_new": true,
@@ -183,7 +183,7 @@
     },
     {
       "date": "2026年10月25日",
-      "period_group": "今後1ヶ月",
+      "period_group": "現在開催中・配信中・実施中",
       "section": "",
       "category": "イベント",
       "is_new": true,
@@ -195,7 +195,7 @@
     },
     {
       "date": "2026年10月26日・11月2日まで",
-      "period_group": "今後1ヶ月",
+      "period_group": "現在開催中・配信中・実施中",
       "section": "",
       "category": "キャンペーン",
       "is_new": true,
@@ -207,7 +207,7 @@
     },
     {
       "date": "2026年10月28日",
-      "period_group": "今後1ヶ月",
+      "period_group": "今後3か月の発売・配信・開催予定",
       "section": "",
       "category": "アニメ",
       "is_new": true,
@@ -219,7 +219,7 @@
     },
     {
       "date": "2026年10月30日",
-      "period_group": "今後1ヶ月",
+      "period_group": "今後3か月の発売・配信・開催予定",
       "section": "",
       "category": "アニメ",
       "is_new": false,
@@ -231,7 +231,7 @@
     },
     {
       "date": "2026年10月30日",
-      "period_group": "今後1ヶ月",
+      "period_group": "今後3か月の発売・配信・開催予定",
       "section": "",
       "category": "映像 配信",
       "is_new": true,
@@ -243,7 +243,7 @@
     },
     {
       "date": "2026年11月7日〜11月9日",
-      "period_group": "今後1ヶ月",
+      "period_group": "今後3か月の発売・配信・開催予定",
       "section": "",
       "category": "イベント",
       "is_new": false,
@@ -255,7 +255,7 @@
     },
     {
       "date": "2026年11月19日",
-      "period_group": "今後1ヶ月",
+      "period_group": "今後3か月の発売・配信・開催予定",
       "section": "",
       "category": "書籍 雑誌",
       "is_new": false,
@@ -267,7 +267,7 @@
     },
     {
       "date": "2026年12月2日",
-      "period_group": "今後1ヶ月",
+      "period_group": "今後3か月の発売・配信・開催予定",
       "section": "",
       "category": "記念日",
       "is_new": false,
@@ -279,7 +279,7 @@
     },
     {
       "date": "2026年12月4日",
-      "period_group": "今後1ヶ月",
+      "period_group": "今後3か月の発売・配信・開催予定",
       "section": "",
       "category": "イベント",
       "is_new": false,
