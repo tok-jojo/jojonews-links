@@ -36,7 +36,7 @@ article{display:grid;grid-template-columns:128px 90px 1fr;align-items:center;gap
 article:last-child{border-bottom:0}
 .date{font-size:.82rem;color:#3f3933;font-weight:650;line-height:1.2;white-space:normal}
 .cat{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:3px 7px;font-size:.72rem;font-weight:750;border:1px solid rgba(0,0,0,.08);white-space:nowrap}
-.cat-event{background:#3D8A66;color:#fff}.cat-game{background:#3978A8;color:#fff}.cat-book{background:#7B61A8;color:#fff}.cat-anime{background:#B85C5C;color:#fff}.cat-campaign{background:#B4772B;color:#fff}.cat-goods{background:#D36B44;color:#fff}.cat-other{background:#6C737D;color:#fff}
+.cat-event{background:#3D8A66;color:#fff}.cat-game{background:#3978A8;color:#fff}.cat-video{background:#0D7788;color:#fff}.cat-anniversary{background:#8A6A00;color:#fff}.cat-book{background:#7B61A8;color:#fff}.cat-anime{background:#B85C5C;color:#fff}.cat-campaign{background:#B4772B;color:#fff}.cat-goods{background:#D36B44;color:#fff}.cat-other{background:#6C737D;color:#fff}
 .cat-figure{background:#077F8D;color:#fff}.cat-plush{background:#8C6BB1;color:#fff}.cat-fashion{background:#C4773B;color:#fff}.cat-sticker{background:#3C8E87;color:#fff}.cat-card{background:#526A12;color:#fff}.cat-lottery{background:#B4772B;color:#fff}.cat-capsule{background:#3F7FB5;color:#fff}.cat-food{background:#B9471B;color:#fff}.cat-stationery{background:#4D8B68;color:#fff}.cat-misc{background:#A65B86;color:#fff}.cat-multiple{background:#6C737D;color:#fff}
 .maincell{min-width:0}
 .titleline{display:flex;align-items:center;gap:7px;min-width:0}
@@ -83,6 +83,8 @@ const categoryMeta=(raw,kind)=>{
   }
   if(/イベント/.test(s)) return {cls:"cat-event",label:s};
   if(/キャンペーン/.test(s)) return {cls:"cat-campaign",label:s};
+  if(/映像[・\s]*配信/.test(s)) return {cls:"cat-video",label:s};
+  if(/記念日/.test(s)) return {cls:"cat-anniversary",label:s};
   if(/ゲーム/.test(s)) return {cls:"cat-game",label:s};
   if(/書籍|雑誌|原作/.test(s)) return {cls:"cat-book",label:s};
   if(/アニメ/.test(s)) return {cls:"cat-anime",label:s};
