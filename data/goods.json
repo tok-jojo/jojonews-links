@@ -1,18 +1,6 @@
 {
-  "updated_at": "2026-11-01",
+  "updated_at": "2026-11-08",
   "items": [
-    {
-      "date": "2026年10月8日",
-      "period_group": "",
-      "section": "直近1ヶ月の発売・登場",
-      "category": "ぬいぐるみ",
-      "is_new": false,
-      "display_text": "アニメ『スターダストクルセイダース』 魂を抜かれた花京院人形\nアミューズメント専用景品。 全2種。",
-      "title": "アニメ『スターダストクルセイダース』 魂を抜かれた花京院人形",
-      "source_type": "X投稿",
-      "url": "https://x.com/jojonewsbot/status/2106051352623563128",
-      "note": ""
-    },
     {
       "date": "2026年10月上旬",
       "period_group": "",
@@ -79,8 +67,8 @@
       "section": "直近1ヶ月の発売・登場",
       "category": "オーディオ",
       "is_new": false,
-      "display_text": "Shokz×アニメ『ファントムブラッド』 OpenDots 2 ディオ・ブランドーモデル\nDioロゴ、薔薇、「3つのほくろ」をデザイン。ボイス全4種を収録。",
-      "title": "Shokz×アニメ『ファントムブラッド』 OpenDots 2 ディオ・ブランドーモデル",
+      "display_text": "Shokz×アニメ『ファントムブラッド』 OpenDots 2 ディオモデル\nDioロゴ、薔薇、「3つのほくろ」をデザイン。ボイス全4種を収録。",
+      "title": "Shokz×アニメ『ファントムブラッド』 OpenDots 2 ディオモデル",
       "source_type": "X投稿",
       "url": "https://x.com/jojonewsbot/status/2113232572985790745",
       "note": ""
@@ -91,8 +79,8 @@
       "section": "直近1ヶ月の発売・登場",
       "category": "オーディオ",
       "is_new": false,
-      "display_text": "Shokz×アニメ『ファントムブラッド』 OpenRun Pro 2 ジョナサン・ジョースターモデル\n波紋疾走の拳と「LuckとPluck」の紋様をデザイン。ボイス全8種を収録。",
-      "title": "Shokz×アニメ『ファントムブラッド』 OpenRun Pro 2 ジョナサン・ジョースターモデル",
+      "display_text": "Shokz×アニメ『ファントムブラッド』 OpenRun Pro 2 ジョナサンモデル\n波紋疾走の拳と「LuckとPluck」の紋様をデザイン。ボイス全8種を収録。",
+      "title": "Shokz×アニメ『ファントムブラッド』 OpenRun Pro 2 ジョナサンモデル",
       "source_type": "X投稿",
       "url": "https://x.com/jojonewsbot/status/2113232418467705091",
       "note": ""
@@ -150,11 +138,23 @@
       "period_group": "",
       "section": "直近1ヶ月の発売・登場",
       "category": "複数",
-      "is_new": true,
+      "is_new": false,
       "display_text": "アニメ『ダイヤモンドは砕けない』粧美堂コラボアイテム\nヘアバンド＆アームバンド、メイクブラシなど。",
       "title": "アニメ『ダイヤモンドは砕けない』粧美堂コラボアイテム",
       "source_type": "X投稿",
       "url": "https://x.com/jojonewsbot/status/2115066067135680605",
+      "note": ""
+    },
+    {
+      "date": "2026年10月28日～11月8日",
+      "period_group": "",
+      "section": "直近1ヶ月の発売・登場",
+      "category": "雑貨",
+      "is_new": true,
+      "display_text": "アニメ『スティール・ボール・ラン』×NTTドコモ POP UP STORE（渋谷）\nタワーレコード渋谷店4Fで開催。限定グッズ販売や特典配布。",
+      "title": "アニメ『スティール・ボール・ラン』×NTTドコモ POP UP STORE（渋谷）",
+      "source_type": "X投稿",
+      "url": "https://x.com/jojonewsbot/status/2115786932693369280",
       "note": ""
     },
     {
@@ -258,7 +258,7 @@
       "period_group": "",
       "section": "直近1ヶ月の発売・登場",
       "category": "食品",
-      "is_new": true,
+      "is_new": false,
       "display_text": "THE★JOJO WORLD TOKYO 「IGGY CAFE」 カレーまん\nピストルズをイメージしたカレーまんが復刻。ランダム全6種。",
       "title": "THE★JOJO WORLD TOKYO 「IGGY CAFE」 カレーまん",
       "source_type": "X投稿",
@@ -268,9 +268,9 @@
     {
       "date": "2026年11月5日",
       "period_group": "",
-      "section": "11月の発売・登場予定",
+      "section": "直近1ヶ月の発売・登場",
       "category": "雑貨",
-      "is_new": true,
+      "is_new": false,
       "display_text": "アニメ『ジョジョの奇妙な冒険』フルカラータンブラー（再登場）\n背景がメタリックに輝くステンレスタンブラー。全6種、約14cm。",
       "title": "アニメ『ジョジョの奇妙な冒険』フルカラータンブラー（再登場）",
       "source_type": "X投稿",
@@ -280,7 +280,7 @@
     {
       "date": "2026年11月5日",
       "period_group": "",
-      "section": "11月の発売・登場予定",
+      "section": "直近1ヶ月の発売・登場",
       "category": "フィギュア",
       "is_new": false,
       "display_text": "アニメ『ダイヤモンドは砕けない』 フィグライフ! キラークイーン\nアミューズメント専用景品、全1種（約16cm）。",
@@ -306,11 +306,23 @@
       "period_group": "",
       "section": "11月の発売・登場予定",
       "category": "ぬいぐるみ",
-      "is_new": true,
+      "is_new": false,
       "display_text": "アニメ「ジョジョの奇妙な冒険」ちびぐるみvol.3\nディオ、カーズ、吉良吉影、ディエゴの全4種。",
       "title": "アニメ「ジョジョの奇妙な冒険」ちびぐるみvol.3",
       "source_type": "X投稿",
       "url": "https://x.com/jojonewsbot/status/2115934516149895358",
+      "note": ""
+    },
+    {
+      "date": "2026年11月第3週",
+      "period_group": "",
+      "section": "11月の発売・登場予定",
+      "category": "カプセルトイ",
+      "is_new": true,
+      "display_text": "アニメ『スティール・ボール・ラン』カプセルフィギュアコレクション08\nジョニィ、スローダンサー、ジャイロ、ディエゴの全4種。",
+      "title": "アニメ『スティール・ボール・ラン』カプセルフィギュアコレクション08",
+      "source_type": "X投稿",
+      "url": "https://x.com/jojonewsbot/status/2117932622152348047",
       "note": ""
     },
     {
@@ -330,11 +342,35 @@
       "period_group": "",
       "section": "11月の発売・登場予定",
       "category": "複数",
-      "is_new": true,
+      "is_new": false,
       "display_text": "THE★JOJO WORLD 新商品\nクリアファイル第2弾、SBR Tシャツ、イギーカフェ木製風キーホルダー。",
       "title": "THE★JOJO WORLD 新商品",
       "source_type": "X投稿",
       "url": "https://x.com/jojonewsbot/status/2116105791145210282",
+      "note": ""
+    },
+    {
+      "date": "2026年11月20日",
+      "period_group": "",
+      "section": "11月の発売・登場予定",
+      "category": "アパレル",
+      "is_new": true,
+      "display_text": "THE★JOJO WORLD Tシャツ（スティール・ボール・ラン）\nサイズ：S／M／L／XL。OSAKAは12月4日発売予定。",
+      "title": "THE★JOJO WORLD Tシャツ（スティール・ボール・ラン）",
+      "source_type": "X投稿",
+      "url": "https://x.com/jojonewsbot/status/2119288259717341690",
+      "note": ""
+    },
+    {
+      "date": "2026年11月20日",
+      "period_group": "",
+      "section": "11月の発売・登場予定",
+      "category": "雑貨",
+      "is_new": true,
+      "display_text": "THE★JOJO WORLD 木製風キーホルダー（イギーカフェ）vol.1\nイギーカフェのメニューイラストを使用。全8種。OSAKAは12月4日発売予定。",
+      "title": "THE★JOJO WORLD 木製風キーホルダー（イギーカフェ）vol.1",
+      "source_type": "X投稿",
+      "url": "https://x.com/jojonewsbot/status/2119297673467658308",
       "note": ""
     },
     {
@@ -359,6 +395,18 @@
       "title": "アニメ『黄金の風』StyleShop GOLDEN WIND",
       "source_type": "X投稿",
       "url": "https://x.com/jojonewsbot/status/2098359759204393036",
+      "note": ""
+    },
+    {
+      "date": "2026年11月25日～12月16日",
+      "period_group": "",
+      "section": "11月の発売・登場予定",
+      "category": "複数",
+      "is_new": true,
+      "display_text": "アニメ『ダイヤモンドは砕けない』新商品\nアクリルスタンド、等身大タペストリーなど。MEDICOS SHOP限定OSMOスタンプも。",
+      "title": "アニメ『ダイヤモンドは砕けない』新商品",
+      "source_type": "X投稿",
+      "url": "https://x.com/jojonewsbot/status/2117261711489249327",
       "note": ""
     },
     {
@@ -402,7 +450,7 @@
       "period_group": "",
       "section": "11月の発売・登場予定",
       "category": "雑貨",
-      "is_new": true,
+      "is_new": false,
       "display_text": "アニメ『ジョジョの奇妙な冒険 ファントムブラッド』石仮面の壁掛け時計\n電源を入れると目が光る。",
       "title": "アニメ『ジョジョの奇妙な冒険 ファントムブラッド』石仮面の壁掛け時計",
       "source_type": "X投稿",
@@ -450,11 +498,23 @@
       "period_group": "",
       "section": "12月の発売・登場予定",
       "category": "食品",
-      "is_new": true,
+      "is_new": false,
       "display_text": "にふぉるめーしょん シールウエハース ～The Animation Special Ⅱ～\nウエハース1枚とキャラシール1枚入り。シール全32種（シークレット1種）。",
       "title": "にふぉるめーしょん シールウエハース ～The Animation Special Ⅱ～",
       "source_type": "X投稿",
       "url": "https://x.com/jojonewsbot/status/2098373263961534724",
+      "note": ""
+    },
+    {
+      "date": "2026年12月4日、18日",
+      "period_group": "",
+      "section": "12月の発売・登場予定",
+      "category": "雑貨",
+      "is_new": false,
+      "display_text": "THE★JOJO WORLD オールスターアクリルキーホルダー 第1弾\n大阪12月4日、東京12月18日発売。第1部〜第9部の全100種。",
+      "title": "THE★JOJO WORLD オールスターアクリルキーホルダー 第1弾",
+      "source_type": "X投稿",
+      "url": "https://x.com/jojonewsbot/status/2111476430337159216",
       "note": ""
     },
     {
@@ -482,6 +542,54 @@
       "note": ""
     },
     {
+      "date": "2026年11月6日～",
+      "period_group": "",
+      "section": "予約・受注受付中",
+      "category": "フィギュア",
+      "is_new": false,
+      "display_text": "ねんどろいど「ジョニィ・ジョースター DX」\nスローダンサー、タスクACT1が付属。ONLINE予約特典「進化ジョニィの能力パーツ」",
+      "title": "ねんどろいど「ジョニィ・ジョースター DX」",
+      "source_type": "X投稿",
+      "url": "https://x.com/jojonewsbot/status/2116135827231437124",
+      "note": ""
+    },
+    {
+      "date": "2026年11月6日～2027年1月5日",
+      "period_group": "",
+      "section": "予約・受注受付中",
+      "category": "フィギュア",
+      "is_new": false,
+      "display_text": "超像可動「ジョニィ・ジョースター・サード」 WF2027冬\n2月下旬以降発送。WF限定セリフプレートとMEDICOS限定「タスクACT1」が付属。",
+      "title": "超像可動「ジョニィ・ジョースター・サード」 WF2027冬",
+      "source_type": "X投稿",
+      "url": "https://x.com/jojonewsbot/status/2116135482614763776",
+      "note": ""
+    },
+    {
+      "date": "2026年11月6日～2027年1月5日",
+      "period_group": "",
+      "section": "予約・受注受付中",
+      "category": "フィギュア",
+      "is_new": false,
+      "display_text": "超像可動「ジョナサン・ジョースター・サード」 WF2027冬\n2月下旬以降発送。WF限定セリフプレートが付属。",
+      "title": "超像可動「ジョナサン・ジョースター・サード」 WF2027冬",
+      "source_type": "X投稿",
+      "url": "https://x.com/jojonewsbot/status/2116134672250122319",
+      "note": ""
+    },
+    {
+      "date": "2026年11月6日～2027年1月5日",
+      "period_group": "",
+      "section": "予約・受注受付中",
+      "category": "フィギュア",
+      "is_new": false,
+      "display_text": "超像可動「キラークイーン Ver. CLEAR & GOLD」 WF2027冬\n2月下旬以降発送。「シアーハートアタック」「ストレイ・キャット」が付属。",
+      "title": "超像可動「キラークイーン Ver. CLEAR & GOLD」 WF2027冬",
+      "source_type": "X投稿",
+      "url": "https://x.com/jojonewsbot/status/2116134009948471789",
+      "note": ""
+    },
+    {
       "date": "2026年9月17日～11月25日",
       "period_group": "",
       "section": "予約・受注受付中",
@@ -494,87 +602,15 @@
       "note": ""
     },
     {
-      "date": "2026年11月6日",
+      "date": "2026年11月27日",
       "period_group": "",
       "section": "予約・受注受付予定",
       "category": "フィギュア",
-      "is_new": false,
-      "display_text": "ねんどろいど「ジョニィ・ジョースター DX」\nスローダンサー、タスクACT1が付属 ONLINE SHOP予約特典は「進化ジョニィの能力パーツ」",
-      "title": "ねんどろいど「ジョニィ・ジョースター DX」",
-      "source_type": "X投稿",
-      "url": "https://x.com/jojonewsbot/status/2116135827231437124",
-      "note": ""
-    },
-    {
-      "date": "2026年11月",
-      "period_group": "",
-      "section": "予約・受注受付予定",
-      "category": "フィギュア",
-      "is_new": false,
-      "display_text": "ねんどろいど「ディエゴ・ブランドー DX」\n11月予約開始予定。DX版は「シルバー・バレット」付属。",
+      "is_new": true,
+      "display_text": "ねんどろいど「ディエゴ・ブランドー DX」\nDX版には「シルバー・バレット」が付属。追加オプションパーツは近日公開予定。",
       "title": "ねんどろいど「ディエゴ・ブランドー DX」",
       "source_type": "X投稿",
-      "url": "https://x.com/jojonewsbot/status/2105251248861823435",
-      "note": ""
-    },
-    {
-      "date": "2027年2月下旬",
-      "period_group": "",
-      "section": "予約・受注受付予定",
-      "category": "フィギュア",
-      "is_new": true,
-      "display_text": "超像可動「ジョニィ・ジョースター・サード」 WF2027冬\n2027年2月下旬以降発送。WF限定セリフプレートとMEDICOS限定「タスクACT1」が付属。",
-      "title": "超像可動「ジョニィ・ジョースター・サード」 WF2027冬",
-      "source_type": "X投稿",
-      "url": "https://x.com/jojonewsbot/status/2116135482614763776",
-      "note": ""
-    },
-    {
-      "date": "2027年2月下旬",
-      "period_group": "",
-      "section": "予約・受注受付予定",
-      "category": "フィギュア",
-      "is_new": true,
-      "display_text": "超像可動「ジョナサン・ジョースター・サード」 WF2027冬\n2027年2月下旬以降発送。WF限定セリフプレートが付属。",
-      "title": "超像可動「ジョナサン・ジョースター・サード」 WF2027冬",
-      "source_type": "X投稿",
-      "url": "https://x.com/jojonewsbot/status/2116134672250122319",
-      "note": ""
-    },
-    {
-      "date": "2027年2月下旬",
-      "period_group": "",
-      "section": "予約・受注受付予定",
-      "category": "フィギュア",
-      "is_new": true,
-      "display_text": "超像可動「キラークイーン Ver. CLEAR & GOLD」 WF2027冬\n2027年2月下旬以降発送。「シアーハートアタック」「ストレイ・キャット」が付属。",
-      "title": "超像可動「キラークイーン Ver. CLEAR & GOLD」 WF2027冬",
-      "source_type": "X投稿",
-      "url": "https://x.com/jojonewsbot/status/2116134009948471789",
-      "note": ""
-    },
-    {
-      "date": "2027年1月",
-      "period_group": "",
-      "section": "新着情報",
-      "category": "ぬいぐるみ",
-      "is_new": true,
-      "display_text": "『ジョジョの奇妙な冒険 ダイヤモンドは砕けない』てちぬい\n東方仗助、広瀬康一、虹村億泰の全3種。",
-      "title": "『ジョジョの奇妙な冒険 ダイヤモンドは砕けない』てちぬい",
-      "source_type": "X投稿",
-      "url": "https://x.com/jojonewsbot/status/2115754736817471884",
-      "note": ""
-    },
-    {
-      "date": "2027年2月",
-      "period_group": "",
-      "section": "新着情報",
-      "category": "ぬいぐるみ",
-      "is_new": true,
-      "display_text": "『ジョジョの奇妙な冒険 ダイヤモンドは砕けない』てちぬい\n空条承太郎、岸辺露伴、吉良吉影の全3種。",
-      "title": "『ジョジョの奇妙な冒険 ダイヤモンドは砕けない』てちぬい",
-      "source_type": "X投稿",
-      "url": "https://x.com/jojonewsbot/status/2115754896758861989",
+      "url": "https://x.com/jojonewsbot/status/2118688931554439194",
       "note": ""
     }
   ],
